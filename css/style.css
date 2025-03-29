@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+    padding: 0px;
+    line-height: 1.5;
+    background-color: blueviolet;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+/* Navegacion */
+nav{
+    background-color: gray;
+    padding: 10px;
+}
+
+nav ul{
+    padding: 0;
+    text-align: center;
+}
+nav ul li{
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
