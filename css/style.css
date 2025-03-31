@@ -1,38 +1,198 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 50px;
-    padding: 0px;
-    line-height: 1.5;
-    background-color: blueviolet;
+/* Estilos generales */
+:root {
+    --rojo-japon: #bc002d;
+    --blanco: #ffffff;
+    --negro: #1a1a1a;
+    --gris-claro: #f5f5f5;
+    --gris-medio: #e0e0e0;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --borde-redondeado: 8px;
 }
 
-header{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin: 20px;
-}
-/* Navegacion */
-nav{
-    background-color: gray;
-    padding: 10px;
-}
-
-nav ul{
+* {
+    margin: 0;
     padding: 0;
-    text-align: center;
-}
-nav ul li{
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a{
-    color: white;
-    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main{
+body {
+    /* background-color: var(--gris-claro); */
+    background:hsla(0, 0%, 76%, 0.34) url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    /* background-size: auto; */
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--rojo-japon);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: var(--blanco);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--borde-redondeado);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--blanco);
+    color: var(--rojo-japon);
+}
+/* Contenido principal */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra);
+}
+
+h2 {
+    color: var(--rojo-japon);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--rojo-japon);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Sección de bienvenida */
+#bienvenida {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#bienvenida p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto 2rem;
+}
+
+.banner {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--borde-redondeado);
+    transition: transform 0.3s ease;
+}
+
+.banner:hover {
+    transform: scale(1.02);
+}
+
+/* Grid de información - ahora con 8 elementos */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-item {
+    background-color: var(--gris-claro);
+    padding: 1.5rem;
+    border-radius: var(--borde-redondeado);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h3 {
+    color: var(--rojo-japon);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Grid de lugares emblemáticos */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: var(--blanco);
+    padding: 1.5rem 1rem 1rem;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
 }
