@@ -1,0 +1,49 @@
+/* Estilos contacto */
+.contenedor-formulario {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.formulario-contacto {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--borde-redondeado);
+    font-size: 1rem;
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    background-color: var(--rojo-japon);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--borde-redondeado);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.btn-enviar:hover {
+    background-color: var(--rojo-hover);
+}

@@ -4,208 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museos de Japón | Descubre Japón</title>
-    <style>
-        /* Estilos generales */
-        :root {
-            --rojo-japon: #bc002d;
-            --rojo-hover: #9c001f;
-            --blanco: #ffffff;
-            --negro: #1a1a1a;
-            --gris-claro: #f5f5f5;
-            --gris-medio: #e0e0e0;
-            --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
-            --borde-redondeado: 8px;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            /* background-color: var(--gris-claro); */
-            background:hsla(0, 0%, 76%, 0.34) url("../img/bg.jpg");
-            background-attachment: fixed;
-            background-blend-mode: multiply;
-            color: var(--negro);
-            line-height: 1.6;
-        }
-        
-        /* Encabezado */
-        header {
-            background-color: var(--rojo-japon);
-            box-shadow: var(--sombra);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        h1 {
-            color: var(--blanco);
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin: 0;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--blanco);
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: var(--borde-redondeado);
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: var(--blanco);
-            color: var(--rojo-japon);
-        }
-        
-        /* Contenido principal */
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            margin-bottom: 3rem;
-            background-color: var(--blanco);
-            padding: 2rem;
-            border-radius: var(--borde-redondeado);
-            box-shadow: var(--sombra);
-        }
-        
-        h2 {
-            color: var(--rojo-japon);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 2px solid var(--rojo-japon);
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-        
-        /* Introducción */
-        .introduccion {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-        
-        /* Lista de museos */
-        .lista-museos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .museo {
-            border: 1px solid var(--gris-medio);
-            border-radius: var(--borde-redondeado);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .museo:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .museo-imagen {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .museo-contenido {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .museo-titulo {
-            color: var(--rojo-japon);
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .museo-descripcion {
-            color: var(--negro);
-            margin-bottom: 1rem;
-            flex-grow: 1;
-        }
-        
-        .museo-metadata {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-        }
-        
-        .museo-ciudad {
-            display: inline-block;
-            background-color: var(--gris-claro);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--negro);
-        }
-        
-        /* Botón de visita */
-        .btn-visitar {
-            display: inline-block;
-            background-color: var(--rojo-japon);
-            color: var(--blanco);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: var(--borde-redondeado);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        
-        .btn-visitar:hover {
-            background-color: var(--rojo-hover);
-            transform: translateY(-2px);
-        }
-        
-        
-        /* Pie de página */
-        footer {
-            background-color: var(--negro);
-            color: var(--blanco);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/museos.css">
 </head>
 <body>
+    <div class="container">
     <header>
         <h1>Descubre Japón</h1>
         <nav>
@@ -229,7 +32,7 @@
             <div class="lista-museos">
                 <!-- Museo 1 -->
                 <div class="museo">
-                    <img src="/img/tokio-museo.jpg" alt="Museo Nacional de Tokio" class="museo-imagen">
+                    <img src="assets/img/tokio-museo.jpg" alt="Museo Nacional de Tokio" class="museo-imagen">
                     <div class="museo-contenido">
                         <h3 class="museo-titulo">🏛️ Museo Nacional de Tokio</h3>
                         <p class="museo-descripcion">
@@ -244,7 +47,7 @@
                 
                 <!-- Museo 2 -->
                 <div class="museo">
-                    <img src="/img/teamlab.jpg" alt="Museo teamLab Borderless" class="museo-imagen">
+                    <img src="assets/img/teamlab.jpg" alt="Museo teamLab Borderless" class="museo-imagen">
                     <div class="museo-contenido">
                         <h3 class="museo-titulo">🎨 Museo de Arte Digital teamLab Borderless</h3>
                         <p class="museo-descripcion">
@@ -259,7 +62,7 @@
                 
                 <!-- Museo 3 -->
                 <div class="museo">
-                    <img src="/img/kioto_museo.jpeg" alt="Museo Nacional de Kioto" class="museo-imagen">
+                    <img src="assets/img/kioto_museo.jpeg" alt="Museo Nacional de Kioto" class="museo-imagen">
                     <div class="museo-contenido">
                         <h3 class="museo-titulo">🏺 Museo Nacional de Kioto</h3>
                         <p class="museo-descripcion">
@@ -274,7 +77,7 @@
                 
                 <!-- Museo 4 -->
                 <div class="museo">
-                    <img src="/img/ferrocarril-museo.jpg" alt="Museo del Ferrocarril de Kioto" class="museo-imagen">
+                    <img src="assets/img/ferrocarril-museo.jpg" alt="Museo del Ferrocarril de Kioto" class="museo-imagen">
                     <div class="museo-contenido">
                         <h3 class="museo-titulo">🚅 Museo del Ferrocarril de Kioto</h3>
                         <p class="museo-descripcion">
@@ -293,5 +96,6 @@
     <footer>
         <p>&copy; 2025 Reyes Ariel - Todos los derechos reservados.</p>
     </footer>
+    </div>
 </body>
 </html>

@@ -1,0 +1,93 @@
+/* Introducción */
+.introduccion {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+/* Lista de museos */
+.lista-museos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.museo {
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--borde-redondeado);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.museo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.museo-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.museo-contenido {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.museo-titulo {
+    color: var(--rojo-japon);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.museo-descripcion {
+    color: var(--negro);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.museo-metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.museo-ciudad {
+    display: inline-block;
+    background-color: var(--gris-claro);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--negro);
+}
+
+/* Botón de visita */
+.btn-visitar {
+    display: inline-block;
+    background-color: var(--rojo-japon);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--borde-redondeado);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-visitar:hover {
+    background-color: var(--rojo-hover);
+    transform: translateY(-2px);
+}
+
